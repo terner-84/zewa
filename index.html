@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <script src="js/jquery-3.3.1.js"></script>
+    <script src="js/handlebars-v4.0.12.js"></script>
+    <script src="js/zewa.js"></script>
+    <script src="js/handle.js"></script>
+    <link rel="stylesheet" href="css/w3.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    
+    <div class="w3-sidebar w3-bar-block" style="width:150px"> 
+        <div class="w3-content w3-bar w3-green">
+            <span class="w3-bar-item">Menu</span>
+        </div>
+        <a onclick="loadTable()" class="w3-bar-item w3-button">Fetch data</a>
+        <input class="w3-bar-item" type="text" name="table_name" id="table_name" value="buys">
+        <a href="#" class="w3-bar-item w3-button">Link 2</a>
+        <a href="#" class="w3-bar-item w3-button">Link 3</a>
+
+        <div class="w3-panel w3-pale-green w3-round-large w3-border w3-border-green">
+            <p>
+                <input type="radio" name="mnu_fce" value="alpha" checked> Alpha
+            </p>
+            <p>
+                <input type="radio" name="mnu_fce" value="bravo"> Bravo
+            </p>
+            <p class="w3-center">
+                <input type="button" class="w3-button w3-green" value="Makej">
+            </p>
+        </div>
+
+    </div>
+    
+<div style="margin-left:150px">
+
+    <div class="w3-container">
+        
+    <div class="w3-bar w3-green">
+        <button class="w3-bar-item w3-button" onclick="openTab('one')">One</button>
+        <button class="w3-bar-item w3-button" onclick="openTab('two')">Two</button>
+        <button class="w3-bar-item w3-button" onclick="openTab('three')">Three</button>
+    </div>
+
+    <div id="one" class="w3-container deluxe" style="display:block">
+        <h1>Formulář pro zpracování v PHP <span></span></h1>
+
+        <form action="generator.php" method="get" id="generator">
+            <p><input type="submit" value="Generator" id="sender"></p> 
+        </form>
+
+        <div class="w3-card-4 w3-margin-bottom">
+                <div id="msg" class="w3-container">
+                        <p>Message here...</p>
+                </div>
+        </div>
+
+        
+        <form class="w3-container" action="insert.php" accept-charset="utf-8">
+            <p>
+            <label class="w3-text-green">Název</label>
+            <input class="w3-input w3-border" type="text" name="item"></p>
+            <p>
+            <label class="w3-text-green">Cena</label>
+            <input class="w3-input w3-border" type="text" name="price"></p>
+            <p>
+            <label class="w3-text-green">Počet</label>
+            <input class="w3-input w3-border" type="text" name="count"></p>
+            <p>
+            <label class="w3-text-green">Koupeno</label>
+            <select class="w3-select" id="bought" name="bought">
+                <option value="true">Ano</option>
+                <option value="false">Ne</option>
+            </select></p>
+            <p>
+            <button class="w3-btn w3-green">Vložit data</button></p>
+        </form>
+        
+
+        <form action="res.php" method="get">
+            <p>Slovo: <input type="text" name="i1" id=""></p>
+            <input type="radio" name="str_fce" value="upper" checked>to UPPER_CASE <br>
+            <input type="radio" name="str_fce" value="lower">to lower_case <br>
+            <input type="radio" name="str_fce" value="first">to UPPER_CASE_FIRST_LETTER <br>
+            <input type="radio" name="str_fce" value="somethingDifferent">somethingDifferent <br>
+            <p><input type="submit" value="Send"></p>
+            <p><input type="button" value="Get JSON from PHP" id="getme"></p>
+        </form>
+    </div>
+
+    <div id="two" class="w3-container w3-display-container deluxe" style="display:none">
+        <h1></h1>
+        <ul>
+            <li>Helma - 1 500</li>
+            <li>Brýle - 500</li>
+            <li>Rukavice - mám</li>
+            <li>Hůlky 130 cm - 400</li>
+            <li>Přeskáče - 4 000</li>
+            <li>Lyže - 5 000</li>
+            <li>Celkem - 11 000</li>
+        </ul>
+    </div>
+
+    <div id="three" class="w3-container w3-display-container deluxe" style="display:none">
+        <h1>not yet supported</h1>
+        <div id="info" class="w3-panel">
+            <table id="tb" class="w3-table-all w3-hoverable">
+                <thead>
+                    <tr class="w3-blue">
+                        <th>Name</th>
+                        <th class="valueRight">Age</th>
+                        <th class="valueCenter">City</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+</div></body>
+</html>
+

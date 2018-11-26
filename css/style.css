@@ -1,0 +1,28 @@
+
+
+body {
+    width: 1000px;
+    margin: 0 auto;
+}
+
+h1 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: blue;
+    
+}
+
+#tb th.valueRight {
+    text-align: right;
+}
+
+#tb th.valueCenter {
+    text-align: center;
+}
+
+#tb td.valueRight {
+    text-align: right;
+}
+
+#tb td.valueCenter {
+    text-align: center;
+}
