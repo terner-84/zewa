@@ -1,0 +1,13 @@
+#helper {
+    display: none;
+}
+
+#pop_up {
+    display: none;
+    border: 3px solid black;
+    background-color: antiquewhite;
+}
+
+#car_canvas {
+    border: 1px solid red;
+}

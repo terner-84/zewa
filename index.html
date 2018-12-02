@@ -28,8 +28,14 @@
             <p>
                 <input type="radio" name="mnu_fce" value="bravo"> Bravo
             </p>
+            <p>
+                <input type="radio" name="mnu_fce" value="beta"> Beta
+            </p>
+            <p>
+                <input type="radio" name="mnu_fce" value="java"> Java
+            </p>
             <p class="w3-center">
-                <input type="button" class="w3-button w3-green" value="Makej">
+                <input type="button" class="w3-button w3-green" value="Makej" id="sider">
             </p>
         </div>
 
@@ -60,19 +66,20 @@
                 </div>
         </div>
 
+        <div id="pop_up">shhjjsj</div>
         
-        <form class="w3-container" action="insert.php" accept-charset="utf-8">
-            <p>
-            <label class="w3-text-green">Název</label>
+        <form id="formik" class="w3-container" action="insert.php" accept-charset="utf-8">
+            <p >
+            <label id="lblNazev" class="w3-text-green my_bg_img my_height"><span class="odsaz">Název</span></label>
             <input class="w3-input w3-border" type="text" name="item"></p>
             <p>
-            <label class="w3-text-green">Cena</label>
+            <label id="lblCena" class="w3-text-green my_bg_img"><span class="odsaz">Cena</span></label>
             <input class="w3-input w3-border" type="text" name="price"></p>
             <p>
-            <label class="w3-text-green">Počet</label>
+            <label id="lblPocet" class="w3-text-green my_bg_img"><span class="odsaz">Počet</span></label>
             <input class="w3-input w3-border" type="text" name="count"></p>
             <p>
-            <label class="w3-text-green">Koupeno</label>
+            <label id="lblKoupeno" class="w3-text-green  my_bg_img"><span class="odsaz">Koupeno</span></label>
             <select class="w3-select" id="bought" name="bought">
                 <option value="true">Ano</option>
                 <option value="false">Ne</option>
@@ -91,6 +98,10 @@
             <p><input type="submit" value="Send"></p>
             <p><input type="button" value="Get JSON from PHP" id="getme"></p>
         </form>
+    </div>
+
+    <div id="m_pole_out">
+
     </div>
 
     <div id="two" class="w3-container w3-display-container deluxe" style="display:none">

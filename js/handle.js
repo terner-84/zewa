@@ -19,4 +19,38 @@ $().ready(function(){
         
     });
 
+    function getCarter(spec) {
+        $.getJSON('m_pole.php?spec=' + spec, function(data){
+            $('#m_pole_out').text('');
+            console.log(data[spec]);
+        });
+        
+    }
+    
+
+    $('#sider').click(function(){
+        let spec = $("input[name='mnu_fce']:checked").val();
+        getCarter(spec);
+    });
+
+    let veller;
+
+    $('#formik label').mouseenter(function(){
+        let value = $(this).attr('id');
+        let pos = $(this).position();
+        $.getJSON('m_pole.php?spec=' + value, function(data){
+            $('#m_pole_out').text('');
+            veller = data[value];
+            $('#pop_up').text(veller);
+            $('#pop_up').css('display','block');
+            $('#pop_up').css('position','absolute');
+            $('#pop_up').css('top',pos['top'] - 20);
+            $('#pop_up').css('left', pos['left'] + 75);
+        });
+    });
+
+    $('#formik label').mouseleave(function(){
+        $('#pop_up').css('display','none');
+    });
+
 });

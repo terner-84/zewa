@@ -11,8 +11,35 @@ h1 {
     
 }
 
+#pop_up {
+    display: none;
+    border: 1px solid green;
+    margin: 16px;
+    padding: 16px;
+    font-size: smaller;
+    background-color: cornsilk;
+}
+
+.show_pop_up {
+    display: block;
+    position: relative;
+}
+
 #tb th.valueRight {
     text-align: right;
+}
+
+.my_bg_img {
+    background-image: url('../img/heart.png');
+    background-repeat: no-repeat;
+    background-size: 16px;
+}
+
+.odsaz {
+    text-indent: 21px;
+    display: inline-block;
+    text-decoration: overline;
+    text-shadow: 3px 3px 2px rgba(231, 179, 179, 0.267);
 }
 
 #tb th.valueCenter {
